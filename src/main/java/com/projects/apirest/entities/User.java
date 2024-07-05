@@ -10,7 +10,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique=true,nullable=false)
     private String name;
+    @Column(unique=true,nullable=false,length=7)
     private Long account;
 
     @ManyToOne
