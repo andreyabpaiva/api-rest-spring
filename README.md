@@ -7,7 +7,7 @@
 classDiagram
     class User {
         -Long id
-        -string name
+        -String name
         -Long account
         -Agency agency
     }
