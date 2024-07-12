@@ -19,6 +19,16 @@ public class User {
     @JoinColumn(name="agency_id")
     private Agency agency;
 
+    public User(String name, Long account, Agency agency) {
+        this.name = name;
+        this.account = account;
+        this.agency = agency;
+    }
+
+    public User() {
+
+    }
+
     public Long getId() {
         return id;
     }

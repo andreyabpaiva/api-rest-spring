@@ -12,6 +12,13 @@ public class Agency {
     @Column(unique=true, nullable=false)
     private String name;
 
+    public Agency(Long id) {
+        this.id=id;
+    }
+
+    public Agency() {
+    }
+
     public Long getId() {
         return id;
     }
