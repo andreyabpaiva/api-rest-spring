@@ -1,7 +1,4 @@
-### API REST using Spring 
-
-
-> Class Diagram - scope
+### RESTful API using Spring 
 
 ``` mermaid
 classDiagram
@@ -19,3 +16,8 @@ classDiagram
 
     User --> Agency
 ```
+#### ✨ Done so far
+- Set controllers to User and Agency
+- Added Integration w Postgresql
+- Modified Constructors and Getters/Setters to lombok sintax
+- Exception Handling
