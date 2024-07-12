@@ -2,7 +2,13 @@ package com.projects.apirest.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name="tb_user")
 public class User {
@@ -18,48 +24,5 @@ public class User {
     @ManyToOne
     @JoinColumn(name="agency_id")
     private Agency agency;
-
-    public User(String name, Long account, Agency agency) {
-        this.name = name;
-        this.account = account;
-        this.agency = agency;
-    }
-
-    public User() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getAccount() {
-        return account;
-    }
-
-    public void setAccount(Long account) {
-        this.account = account;
-    }
-
-    public Agency getAgency() {
-        return agency;
-    }
-
-    public void setAgency(Agency agency) {
-        this.agency = agency;
-    }
-
 
 }

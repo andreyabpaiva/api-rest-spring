@@ -1,5 +1,6 @@
 package com.projects.apirest.controllers;
 
+import com.projects.apirest.entities.Agency;
 import com.projects.apirest.entities.User;
 import com.projects.apirest.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,10 @@ public class UserController {
         return userRepository
                 .findById(id)
                 .get();
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id){
+        userRepository.deleteById(id);
     }
 }
